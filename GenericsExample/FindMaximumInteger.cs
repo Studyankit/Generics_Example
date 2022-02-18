@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace GenericsExample
 {
-    internal class FindMaximumFloat
+    internal class FindMaximumString
     {
-        public static void GetMax(float firstNumber, float secondNumber, float thirdNumber)
+        public static void GetMax<T>(T firstValue, T secondValue, T thirdValue) where T : System.IComparable<T>
         {
             //// used compareto method
-            if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
-                Console.WriteLine(firstNumber + ", Is the max value.");
-            if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0)
-                Console.WriteLine(secondNumber + ", Is the max value.");
-            if (thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) > 0)
-                Console.WriteLine(thirdNumber + ", Is the max value.");
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+                Console.WriteLine(firstValue + ", Is the max value.");
+            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+                Console.WriteLine(secondValue + ", Is the max value.");
+            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+                Console.WriteLine(thirdValue + ", Is the max value.");
         }
     }
 }
