@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace GenericsExample
 {
-    internal class FindMaximumInteger
+    internal class FindMaximumFloat
     {
-        public static void FindIntMax(int num1, int num2, int num3)
+        public static void GetMax(float firstNumber, float secondNumber, float thirdNumber)
         {
-            if (num1.CompareTo(num2) >= 0 && num1.CompareTo(num3) >= 0)
-                Console.WriteLine("max num is: "+num1);
-            else if (num2.CompareTo(num3) >= 0)
-                Console.WriteLine("max num is: " + num2);
-            else
-                Console.WriteLine("max num is: " + num3);
+            //// used compareto method
+            if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
+                Console.WriteLine(firstNumber + ", Is the max value.");
+            if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0)
+                Console.WriteLine(secondNumber + ", Is the max value.");
+            if (thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) > 0)
+                Console.WriteLine(thirdNumber + ", Is the max value.");
         }
     }
 }
